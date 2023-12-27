@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration Form</title>
+  <link rel="icon" href="static/main/img/favicon.png">
+  <link rel="stylesheet" href="static/main/css/signUp.css">
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Signup</header>
+      <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+        {{ form.username }}
+        {{ form.email }}
+        {{ form.password1 }}
+        {{ form.password2 }}
+        <input type="submit" class="button" value="SignUp">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <a href="{% url 'signin' %}">Login</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

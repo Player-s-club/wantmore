@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica|Poppins:300,400,500,600&display=swap" rel="stylesheet">;
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Players club</title>
+    <link rel="icon" href="static/main/img/favicon.png">
+     <!-- style CSS -->
+     <link rel="stylesheet" href="static/main/css/style.css">
+</head>
+    
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}"> <img src="static/main/img/logo2.png" alt="logo2"></a>
+            <div class="navbar-wrap">
+                <ul class="navbar-menu">
+                    <li><a href="#home">Домой</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#best">Лучшее</a></li>
+                    <li><a href="#subscribe">Подписка</a></li>
+                    
+                </ul>
+                <a href="{% url 'login' %}" class="sign">Вход</a>
+    
+            </div>
+        </div>
+        
+    </nav>
+    
+        
+         
+        
+    
+    <section id="about">
+        <div class="banner_part">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="banner_text">
+                            <div class="banner_text_iner">
+                                <h1>Want  <br>
+                                    more..?</h1>
+                                <p>Then register on our website 
+                                    using this button</p>
+                                <a href="{% url 'login' %}" class="btn_1">Sign up / Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+
+    <section id="news">
+        <h2>Новости</h2>
+        <p>Будьте в курсе последних событий, обновлений и новостей в мире Counter-Strike.</p>
+        <p>У нас вы найдете интересные статьи, обзоры и аналитику о текущем состоянии игры и её сообщества.</p>
+    </section>
+
+    <section id="best">
+        <h2>Лучшее</h2>
+        <p>Изучите лучшие стратегии, тактики и моменты в мире Counter-Strike.</p>
+        <p>Мы собрали для вас видео с выдающимися моментами из профессиональных матчей и советы от опытных игроков.</p>
+    </section>
+
+    <section id="subscribe">
+        <h2>Подписка</h2>
+        <p>Подпишитесь на нашу рассылку, чтобы получать уведомления о самых важных событиях в мире Counter-Strike.</p>
+        <p>Будьте первыми, кто узнает о новых турнирах, обновлениях игры и других интересных событиях!</p>
+    </section>
+    <footer>
+        <p>&copy;Players club </p>
+    </footer>
+
+</body>
+
+</html>

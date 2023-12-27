@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/main/css/stylelogin.css">
+    <title>Sign Up / Sign In | Want more..?</title>
+    <link rel="icon" href="static/main/img/favicon.png">
+</head>
+<body>
+    <header class="headerlogin">
+        <div>
+            <a class="logologin" href="{% url 'home' %}"> <img src="static/main/img/logo.png" alt="logo"> </a>
+        </div>
+    </header>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+             <form action="{% url 'register' %}" method="post">
+                <h1>Create Account</h1>
+                    {% csrf_token %}
+                    <label for="id_username">New Username:</label>
+                    <!--suppress XmlDuplicatedId -->
+                 <input type="text" id="id_username" name="username" required><br>
+                    <label for="id_password">New Password:</label>
+                    <!--suppress XmlDuplicatedId -->
+                 <input type="password" id="id_password" name="password" required><br>
+<!--                    <div class="col-md-6">-->
+<!--                        {{ form_register.username }}-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6">-->
+<!--                        {{ form_register.email }}-->
+<!--                    </div>-->
+<!--                    <div class="col-md-12">-->
+<!--                        {{ form_register.password }}-->
+<!--                    </div>-->
+                <!-- <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span> -->
+<!--                <input type="text" name="username" placeholder="Username"/>-->
+<!--                <input type="email" name="email"  placeholder="Email"/>-->
+<!--                <input type="password" name="password" placeholder="Password" />-->
+                <button>Sign Up</button>
+             </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                <label for="id_username">Username:</label>
+                <input type="text" id="id_username" name="new_username" required><br>
+                <label for="id_password">Password:</label>
+                <input type="password" id="id_password" name="new_password" required><br>
+<!--                     <div class="col-md-6">-->
+<!--                        {{ form_login.username }}-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6">-->
+<!--                        {{ form_login.password }}-->
+<!--                    </div>-->
+<!--                <h1>Sign in</h1>-->
+                <!-- <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span> -->
+<!--                <input type="username" placeholder="username" />-->
+<!--                <input type="password" placeholder="password" />-->
+                <!--<a href="#">Forgot your password?</a>-->
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/main/js/jslogin.js"></script>
+</body>
+</html>
